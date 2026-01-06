@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Modern Premium App</title>
+    <meta name="description" content="Our premium services.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script type="module" src="/main.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Clash Display', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-indigo-500 selection:text-white"
+    x-data="{ mobileMenuOpen: false }">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-100 bg-white">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <a href="/index.html" class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="4" y="4" width="7" height="7" rx="1" />
+                    <rect x="13" y="4" width="7" height="7" rx="1" />
+                    <rect x="4" y="13" width="7" height="7" rx="1" />
+                    <rect x="13" y="13" width="7" height="7" rx="1" />
+                </svg>
+                <span class="text-xl font-semibold text-gray-900">GradeWise</span>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/index.html" class="text-[15px] text-gray-700 hover:text-gray-900">Home</a>
+                <a href="/our-services.html" class="text-[15px] text-gray-700 hover:text-gray-900">Services</a>
+                <a href="/about-us.html" class="text-[15px] text-gray-700 hover:text-gray-900">About Us</a>
+                <a href="/privacy-policy.html" class="text-[15px] text-gray-700 hover:text-gray-900">Privacy</a>
+            </div>
+
+            <!-- Login Button -->
+            <a href="/login.html"
+                class="bg-[#FF6B35] hover:bg-[#E55A2B] text-white text-[15px] font-medium px-5 py-2.5 rounded-full transition-colors">
+                Log in
+            </a>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div
+                class="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-gradient-to-tr from-indigo-100 to-cyan-100 blur-[80px] opacity-60">
+            </div>
+            <div
+                class="absolute top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-gradient-to-bl from-purple-100 to-pink-100 blur-[80px] opacity-60">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-6 border border-indigo-100">
+                Our Capabilities
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-slate-900">
+                Solutions that <span
+                    class="bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent">Scale With
+                    You</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                We provide end-to-end digital services designed to accelerate your growth and deliver exceptional user
+                experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="group relative p-8 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-indigo-600/30">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Web Development</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Custom websites and web applications built with
+                            the latest technologies for speed, SEO, and performance.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-700 group-hover:translate-x-1 transition-transform">
+                            Learn more <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="group relative p-8 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-cyan-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-cyan-600/30">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">UI/UX Design</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">User-centric design that creates intuitive and
+                            engaging digital experiences for your customers.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-cyan-600 font-semibold hover:text-cyan-700 group-hover:translate-x-1 transition-transform">
+                            Learn more <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="group relative p-8 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-purple-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-purple-600/30">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Digital Strategy</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Data-driven strategies to position your brand,
+                            reach your audience, and achieve your business goals.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 group-hover:translate-x-1 transition-transform">
+                            Learn more <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="group relative p-8 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-pink-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-pink-600/30">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.2-2.85.577-4.147">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Brand Identity</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Crafting memorable brand experiences that
+                            resonate with customers and stand the test of time.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 group-hover:translate-x-1 transition-transform">
+                            Learn more <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="group relative p-8 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-orange-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-orange-600/30">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">SEO Optimization</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Improving visibility and driving organic traffic
+                            to ensure your business gets found by the right people.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 group-hover:translate-x-1 transition-transform">
+                            Learn more <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div
+                    class="group relative p-8 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center mb-6 shadow-lg shadow-blue-600/30">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-900">Cloud Solutions</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Scalable cloud infrastructure ensuring your
+                            applications are always available, secure, and performant.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 group-hover:translate-x-1 transition-transform">
+                            Learn more <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-slate-50 border-t border-gray-100">
+        <div class="max-w-[1000px] mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-slate-900 mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-slate-600 mb-8">Join hundreds of successful companies who have elevated their digital
+                presence with us.</p>
+            <button
+                class="text-white bg-slate-900 hover:bg-slate-800 font-medium rounded-full text-lg px-8 py-4 transition-all shadow-xl hover:shadow-2xl">
+                Get a Quote
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#F8FAFC] py-10 border-t border-gray-200">
+        <div class="max-w-[1000px] mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+                <a href="#" class="text-[13px] text-gray-600 hover:text-gray-900">Contact Us</a>
+                <div class="flex flex-col items-center gap-4">
+                    <a href="/privacy-policy.html" class="text-[14px] font-semibold text-gray-900">Privacy Policy</a>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-gray-500 hover:text-gray-700"><svg class="w-5 h-5" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700"><svg class="w-5 h-5" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700"><svg class="w-5 h-5" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <a href="#" class="text-[13px] text-gray-600 hover:text-gray-900">Terms of Service</a>
+            </div>
+            <p class="text-[12px] text-gray-400 text-center">© 2024 EduPredict. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
