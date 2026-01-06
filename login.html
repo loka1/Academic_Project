@@ -57,18 +57,18 @@
             <p class="text-[15px] text-gray-500 text-center mb-8">Please enter your details to sign in</p>
 
             <!-- Form -->
-            <form class="space-y-6">
+            <form @submit.prevent="window.location.href = '/dashboard.html'" class="space-y-6">
                 <!-- Email/Username Input -->
                 <div>
                     <label class="block text-[15px] font-semibold text-gray-900 mb-2">Email or Username</label>
-                    <input type="text" placeholder="Enter your email or username"
+                    <input type="text" placeholder="Enter your email or username" required
                         class="w-full px-4 py-3.5 border-b border-gray-200 text-[15px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-[#FF6B35] transition-colors bg-transparent">
                 </div>
 
                 <!-- Password Input -->
                 <div>
                     <label class="block text-[15px] font-semibold text-gray-900 mb-2">Password</label>
-                    <input type="password" placeholder="Enter your password"
+                    <input type="password" placeholder="Enter your password" required
                         class="w-full px-4 py-3.5 border-b border-gray-200 text-[15px] text-gray-700 placeholder-gray-400 focus:outline-none focus:border-[#FF6B35] transition-colors bg-transparent">
                 </div>
 
