@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Courses - EduPredict</title>
+    <meta name="description" content="Manage course records.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="/main.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen" x-data="coursesApp()">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-[260px] bg-[#1E293B] text-white flex flex-col fixed h-full">
+            <div class="px-6 py-6">
+                <a href="/index.html" class="flex items-center gap-2">
+                    <svg class="w-6 h-6 text-[#FF6B35]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                    <span class="text-lg font-semibold">EduPredict</span>
+                </a>
+            </div>
+            <nav class="flex-1 px-4 py-4">
+                <ul class="space-y-1">
+                    <li><a href="/dashboard.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-white/5 transition-colors"><svg
+                                class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>Dashboard</a></li>
+                    <li><a href="/students.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-white/5 transition-colors"><svg
+                                class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>Students</a></li>
+                    <li><a href="/courses.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#FF6B35] text-white font-medium"><svg
+                                class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>Courses</a></li>
+                    <li><a href="/instructors.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-white/5 transition-colors"><svg
+                                class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                            </svg>Instructors</a></li>
+                    <li><a href="/profile.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-white/5 transition-colors"><svg
+                                class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>Profile</a></li>
+                </ul>
+            </nav>
+            <div class="px-4 py-4 border-t border-white/10">
+                <div class="flex items-center gap-3 px-4 py-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-[#FF6B35] flex items-center justify-center text-white font-semibold">
+                        AD</div>
+                    <div class="flex-1">
+                        <p class="text-sm font-medium">Admin User</p>
+                        <p class="text-xs text-gray-400">Administrator</p>
+                    </div>
+                    <a href="/login.html" class="text-gray-400 hover:text-white"><svg class="w-5 h-5" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-[260px]">
+            <header class="bg-white border-b border-gray-200 px-8 py-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">Manage Courses</h1>
+                        <p class="text-sm text-gray-500 mt-1">Add, edit, and manage course catalog.</p>
+                    </div>
+                    <a href="/course-form.html"
+                        class="flex items-center gap-2 bg-[#FF6B35] hover:bg-[#E55A2B] text-white px-4 py-2.5 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                        Add Course
+                    </a>
+                </div>
+            </header>
+
+            <div class="p-8">
+                <!-- Search & Filter -->
+                <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-1 relative">
+                            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            <input type="text" x-model="search" placeholder="Search courses..."
+                                class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#FF6B35]">
+                        </div>
+                        <select
+                            class="px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#FF6B35]">
+                            <option>All Departments</option>
+                            <option>Computer Science</option>
+                            <option>Mathematics</option>
+                            <option>Engineering</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Courses Table -->
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-gray-50 border-b border-gray-100">
+                            <tr>
+                                <th class="text-left px-6 py-4 text-xs font-semibold text-gray-500 uppercase">Course
+                                </th>
+                                <th class="text-left px-6 py-4 text-xs font-semibold text-gray-500 uppercase">Code</th>
+                                <th class="text-left px-6 py-4 text-xs font-semibold text-gray-500 uppercase">Department
+                                </th>
+                                <th class="text-left px-6 py-4 text-xs font-semibold text-gray-500 uppercase">Credits
+                                </th>
+                                <th class="text-left px-6 py-4 text-xs font-semibold text-gray-500 uppercase">Enrolled
+                                </th>
+                                <th class="text-left px-6 py-4 text-xs font-semibold text-gray-500 uppercase">Instructor
+                                </th>
+                                <th class="text-right px-6 py-4 text-xs font-semibold text-gray-500 uppercase">Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <template x-for="course in filteredCourses" :key="course.id">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-lg flex items-center justify-center"
+                                                :class="course.color">
+                                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="1.5"
+                                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                                </svg>
+                                            </div>
+                                            <p class="text-sm font-medium text-gray-900" x-text="course.name"></p>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm font-medium text-[#FF6B35]" x-text="course.code"></td>
+                                    <td class="px-6 py-4 text-sm text-gray-600" x-text="course.department"></td>
+                                    <td class="px-6 py-4 text-sm text-gray-600" x-text="course.credits"></td>
+                                    <td class="px-6 py-4">
+                                        <span class="text-sm text-gray-900"
+                                            x-text="course.enrolled + '/' + course.capacity"></span>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-600" x-text="course.instructor"></td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center justify-end gap-2">
+                                            <a :href="'/course-form.html?id=' + course.id"
+                                                class="p-2 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-lg">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="1.5"
+                                                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                                </svg>
+                                            </a>
+                                            <button @click="deleteCourse(course.id)"
+                                                class="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="1.5"
+                                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function coursesApp() {
+            return {
+                search: '',
+                courses: [
+                    { id: 1, code: 'CS301', name: 'Data Structures', department: 'Computer Science', credits: 3, enrolled: 28, capacity: 30, instructor: 'Dr. Sarah Johnson', color: 'bg-blue-500' },
+                    { id: 2, code: 'CS401', name: 'Algorithms', department: 'Computer Science', credits: 3, enrolled: 25, capacity: 30, instructor: 'Dr. Michael Chen', color: 'bg-indigo-500' },
+                    { id: 3, code: 'MATH201', name: 'Linear Algebra', department: 'Mathematics', credits: 4, enrolled: 32, capacity: 35, instructor: 'Prof. Robert Brown', color: 'bg-purple-500' },
+                    { id: 4, code: 'ENG101', name: 'Engineering Principles', department: 'Engineering', credits: 3, enrolled: 22, capacity: 25, instructor: 'Prof. Emily Davis', color: 'bg-green-500' },
+                    { id: 5, code: 'CS201', name: 'Database Systems', department: 'Computer Science', credits: 3, enrolled: 30, capacity: 30, instructor: 'Dr. James Wilson', color: 'bg-orange-500' },
+                    { id: 6, code: 'MATH301', name: 'Calculus III', department: 'Mathematics', credits: 4, enrolled: 18, capacity: 25, instructor: 'Prof. Robert Brown', color: 'bg-pink-500' },
+                ],
+                get filteredCourses() {
+                    if (!this.search) return this.courses;
+                    return this.courses.filter(c => c.name.toLowerCase().includes(this.search.toLowerCase()) || c.code.toLowerCase().includes(this.search.toLowerCase()));
+                },
+                deleteCourse(id) {
+                    if (confirm('Are you sure you want to delete this course?')) {
+                        this.courses = this.courses.filter(c => c.id !== id);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
