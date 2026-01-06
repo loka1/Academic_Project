@@ -43,10 +43,10 @@
             </div>
 
             <!-- Login Button -->
-                <a href="/login.html"
+            <a href="/login.html"
                 class="bg-[#FF6B35] hover:bg-[#E55A2B] text-white text-[15px] font-medium px-5 py-2.5 rounded-full transition-colors">
                 Log in
-                </a>
+            </a>
         </div>
     </nav>
 
@@ -156,29 +156,42 @@
     <!-- About Us Section -->
     <section id="about" class="py-16 bg-white">
         <div class="max-w-[1000px] mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-start gap-8">
-                <!-- Illustration -->
-                <div class="w-32 h-32 bg-[#E8F4F8] rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <svg class="w-16 h-16 text-[#4A90A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Illustration Card -->
+                <div
+                    class="w-[280px] h-[220px] bg-white rounded-2xl border border-gray-100 shadow-sm flex items-center justify-center flex-shrink-0 relative">
+                    <!-- Blue dot top-left -->
+                    <div class="absolute top-6 left-6 w-3 h-3 bg-[#4A90A4] rounded-full"></div>
+                    <!-- Green dot bottom-right -->
+                    <div class="absolute bottom-6 right-6 w-3 h-3 bg-[#22C55E] rounded-full"></div>
+
+                    <!-- Person illustration -->
+                    <div class="flex flex-col items-center">
+                        <!-- Head -->
+                        <div class="w-16 h-16 border-2 border-[#FF6B35] rounded-full mb-1"></div>
+                        <!-- Body -->
+                        <svg class="w-24 h-16 text-[#FF6B35]" viewBox="0 0 100 70" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 70 Q50 30 80 70" stroke-linecap="round" />
+                            <ellipse cx="50" cy="15" rx="20" ry="10" fill="none" />
+                        </svg>
+                    </div>
                 </div>
 
                 <!-- Content -->
                 <div class="flex-1">
-                    <h2 class="text-[20px] font-bold text-gray-900 mb-4">About Us</h2>
-                    <p class="text-[13px] text-gray-600 leading-relaxed mb-3">
+                    <h2 class="text-[24px] font-bold text-gray-900 mb-4">About Us</h2>
+                    <p class="text-[14px] text-gray-600 leading-relaxed mb-4">
                         EduPredict is dedicated to empowering students with the tools they need to succeed academically.
                         Our mission is to provide accurate GPA predictions and personalized
                         insights to help students reach their full potential.
                     </p>
-                    <p class="text-[13px] text-gray-600 leading-relaxed mb-6">
+                    <p class="text-[14px] text-gray-600 leading-relaxed mb-6">
                         We believe in transparency, innovation, and student success. Our team combines expertise in
                         education and artificial intelligence to create meaningful solutions for the modern student.
                     </p>
                     <a href="/about-us.html"
-                        class="inline-block bg-[#FF6B35] hover:bg-[#E55A2B] text-white text-[13px] font-medium px-5 py-2.5 rounded-full transition-colors">
+                        class="inline-block bg-[#FF6B35] hover:bg-[#E55A2B] text-white text-[14px] font-medium px-6 py-3 rounded-full transition-colors">
                         Learn More
                     </a>
                 </div>
@@ -264,7 +277,7 @@
         <div class="max-w-[1000px] mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
                 <!-- Contact Us -->
-                <a href="#contact" class="text-[13px] text-gray-600 hover:text-gray-900">Contact Us</a>
+                <a href="/contact-us.html" class="text-[13px] text-gray-600 hover:text-gray-900">Contact Us</a>
 
                 <!-- Center: Privacy Policy + Social Icons -->
                 <div class="flex flex-col items-center gap-4">
@@ -292,7 +305,8 @@
                 </div>
 
                 <!-- Terms of Service -->
-                <a href="#" class="text-[13px] text-gray-600 hover:text-gray-900">Terms of Service</a>
+                <a href="/terms-of-service.html" class="text-[13px] text-gray-600 hover:text-gray-900">Terms of
+                    Service</a>
             </div>
 
             <!-- Copyright -->

@@ -13,6 +13,8 @@ export default defineConfig({
                 ourServices: resolve(__dirname, 'our-services.html'),
                 privacyPolicy: resolve(__dirname, 'privacy-policy.html'),
                 aboutUs: resolve(__dirname, 'about-us.html'),
+                contactUs: resolve(__dirname, 'contact-us.html'),
+                termsOfService: resolve(__dirname, 'terms-of-service.html'),
             },
         },
     },
