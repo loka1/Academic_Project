@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+    // Set base path for GitHub Pages - update 'Academic_Project' to match your repository name
+    base: process.env.GITHUB_ACTIONS ? '/Academic_Project/' : '/',
     build: {
         rollupOptions: {
             input: {
