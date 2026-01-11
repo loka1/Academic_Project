@@ -111,21 +111,81 @@
             </header>
 
             <!-- Page Title -->
-            <div class="px-8 pt-6">
-                <h1 class="text-2xl font-bold text-[#2DD4BF]">Student Dashboard</h1>
-                <p class="text-sm text-gray-500 mt-1">Welcome back! Here's your academic overview.</p>
+            <div class="px-8 pt-8">
+                <h1 class="text-2xl font-bold text-[#FF6B35]">Overview</h1>
+                <p class="text-sm text-gray-500 mt-1">Welcome back, Sarah</p>
             </div>
 
             <!-- Dashboard Content -->
             <div class="p-8">
-                <div class="bg-white rounded-xl p-12 border border-gray-100 shadow-sm text-center">
-                    <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                    <h2 class="text-xl font-semibold text-gray-700 mb-2">Dashboard Coming Soon</h2>
-                    <p class="text-gray-500">Your personalized academic dashboard will appear here.</p>
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-4 gap-4 mb-8">
+                    <!-- Current GPA -->
+                    <div class="bg-[#1A1A1A] rounded-xl p-5">
+                        <p class="text-sm text-gray-400 mb-2">Current GPA</p>
+                        <p class="text-3xl font-bold text-[#FF6B35]">3.8</p>
+                    </div>
+
+                    <!-- Registered Courses -->
+                    <div class="bg-[#1A1A1A] rounded-xl p-5">
+                        <p class="text-sm text-gray-400 mb-2">Registered Courses</p>
+                        <p class="text-3xl font-bold text-[#FF6B35]">5</p>
+                    </div>
+
+                    <!-- Credit Hours -->
+                    <div class="bg-[#1A1A1A] rounded-xl p-5">
+                        <p class="text-sm text-gray-400 mb-2">Credit Hours</p>
+                        <p class="text-3xl font-bold text-[#FF6B35]">15</p>
+                    </div>
+
+                    <!-- Overall Grade -->
+                    <div class="bg-[#1A1A1A] rounded-xl p-5">
+                        <p class="text-sm text-gray-400 mb-2">Overall Grade</p>
+                        <p class="text-3xl font-bold text-[#FF6B35]">A</p>
+                    </div>
+                </div>
+
+                <!-- GPA Evolution Section -->
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">GPA Evolution</h2>
+
+                    <div class="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+                        <!-- GPA Header -->
+                        <div class="mb-6">
+                            <p class="text-lg font-bold text-gray-900">GPA</p>
+                            <p class="text-2xl font-bold text-[#2DD4BF]">3.8</p>
+                            <p class="text-sm text-gray-500">Semesters <span
+                                    class="text-green-500 font-medium">+0.2%</span></p>
+                        </div>
+
+                        <!-- Chart Area -->
+                        <div class="h-[180px] relative">
+                            <svg class="w-full h-full" viewBox="0 0 800 150" preserveAspectRatio="none">
+                                <!-- Gradient -->
+                                <defs>
+                                    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#1A1A1A;stop-opacity:0.3" />
+                                        <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:0" />
+                                    </linearGradient>
+                                </defs>
+                                <!-- Area fill -->
+                                <path
+                                    d="M0,100 Q50,80 100,90 T200,110 T300,70 T400,100 T500,60 T600,40 T700,50 T800,45 L800,150 L0,150 Z"
+                                    fill="url(#chartGradient)" />
+                                <!-- Line -->
+                                <path d="M0,100 Q50,80 100,90 T200,110 T300,70 T400,100 T500,60 T600,40 T700,50 T800,45"
+                                    fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+
+                        <!-- Semester Labels -->
+                        <div class="flex justify-between text-sm text-gray-500 mt-4 px-4">
+                            <span>Fall 2022</span>
+                            <span>Spring 2023</span>
+                            <span>Fall 2023</span>
+                            <span>Spring 2024</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

@@ -23,10 +23,21 @@ export default defineConfig({
                 // Doctors Panel
                 doctorsDashboard: resolve(__dirname, 'doctors/dashboard.html'),
                 doctorsStudents: resolve(__dirname, 'doctors/students.html'),
-                doctorsInstructors: resolve(__dirname, 'doctors/instructors.html'),
-                doctorsSettings: resolve(__dirname, 'doctors/settings.html'),
                 doctorsStudentForm: resolve(__dirname, 'doctors/student-form.html'),
+                doctorsInstructors: resolve(__dirname, 'doctors/instructors.html'),
                 doctorsInstructorForm: resolve(__dirname, 'doctors/instructor-form.html'),
+                doctorsCourses: resolve(__dirname, 'doctors/courses.html'),
+                doctorsCourseForm: resolve(__dirname, 'doctors/course-form.html'),
+                doctorsUsers: resolve(__dirname, 'doctors/users.html'),
+                doctorsUserForm: resolve(__dirname, 'doctors/user-form.html'),
+                doctorsRoles: resolve(__dirname, 'doctors/roles.html'),
+                doctorsRoleForm: resolve(__dirname, 'doctors/role-form.html'),
+                doctorsNotifications: resolve(__dirname, 'doctors/notifications.html'),
+                doctorsProfile: resolve(__dirname, 'doctors/profile.html'),
+                doctorsSettings: resolve(__dirname, 'doctors/settings.html'),
+                doctorsGpaPrediction: resolve(__dirname, 'doctors/gpa-prediction.html'),
+                doctorsViewReport: resolve(__dirname, 'doctors/view-report.html'),
+                doctorsScheduleMeeting: resolve(__dirname, 'doctors/schedule-meeting.html'),
 
                 // Student Panel
                 studentDashboard: resolve(__dirname, 'student/dashboard.html'),

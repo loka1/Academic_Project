@@ -35,7 +35,7 @@
             <nav class="flex-1 px-4 py-2">
                 <ul class="space-y-1">
                     <li><a href="/student/dashboard.html"
-                            class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#2DD4BF] text-white font-medium"><svg
+                            class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-white/10 transition-colors"><svg
                                 class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -47,7 +47,7 @@
                                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>My Grades</a></li>
                     <li><a href="/student/gpa-predictions.html"
-                            class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-white/10 transition-colors"><svg
+                            class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#2DD4BF] text-white font-medium"><svg
                                 class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -111,21 +111,99 @@
             </header>
 
             <!-- Page Title -->
-            <div class="px-8 pt-6">
-                <h1 class="text-2xl font-bold text-[#2DD4BF]">GPA Predictions</h1>
-                <p class="text-sm text-gray-500 mt-1">Welcome back! Here's your academic overview.</p>
+            <div class="px-8 pt-8">
+                <h1 class="text-2xl font-bold text-gray-900">GPA Prediction</h1>
+                <p class="text-sm text-gray-500 mt-1">Predict your GPA based on your current courses and expected
+                    grades.</p>
             </div>
 
-            <!-- Dashboard Content -->
+            <!-- GPA Prediction Content -->
             <div class="p-8">
-                <div class="bg-white rounded-xl p-12 border border-gray-100 shadow-sm text-center">
-                    <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                    <h2 class="text-xl font-semibold text-gray-700 mb-2">Coming Soon</h2>
-                    <p class="text-gray-500">AI-powered GPA prediction tools will appear here.</p>
+                <!-- Course Information Section -->
+                <div class="mb-8">
+                    <h2 class="text-lg font-bold text-gray-900 mb-4">Course Information</h2>
+
+                    <!-- Select Course -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Select Course</label>
+                        <select
+                            class="w-full px-4 py-3 bg-[#1A1A1A] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35]">
+                            <option>Choose</option>
+                            <option>Computer Science 101</option>
+                            <option>Data Structures</option>
+                            <option>Algorithms</option>
+                            <option>Database Systems</option>
+                            <option>Linear Algebra</option>
+                        </select>
+                    </div>
+
+                    <!-- Expected Grade -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Expected Grade</label>
+                        <select
+                            class="w-full px-4 py-3 bg-[#1A1A1A] text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35]">
+                            <option>Select</option>
+                            <option>A+ (4.0)</option>
+                            <option>A (4.0)</option>
+                            <option>A- (3.7)</option>
+                            <option>B+ (3.3)</option>
+                            <option>B (3.0)</option>
+                            <option>B- (2.7)</option>
+                            <option>C+ (2.3)</option>
+                            <option>C (2.0)</option>
+                        </select>
+                    </div>
+
+                    <!-- Credit Hours -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Credit Hours</label>
+                        <input type="number" placeholder="Enter credit hours"
+                            class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] placeholder-gray-400">
+                    </div>
+                </div>
+
+                <!-- Additional Factors Section -->
+                <div class="mb-8">
+                    <h2 class="text-lg font-bold text-gray-900 mb-4">Additional Factors</h2>
+
+                    <!-- Study Hours per Week -->
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Study Hours per Week</label>
+                        <input type="number" placeholder="Enter study hours"
+                            class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] placeholder-gray-400">
+                    </div>
+                </div>
+
+                <!-- Predict Button -->
+                <div class="flex justify-center mb-8">
+                    <button
+                        class="bg-[#FF6B35] hover:bg-[#E55A2B] text-white px-12 py-3 rounded-full font-medium transition-colors">
+                        Predict
+                    </button>
+                </div>
+
+                <!-- Results Section -->
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <!-- Predicted GPA -->
+                    <div class="bg-white rounded-xl p-6 border border-gray-200">
+                        <p class="text-sm text-gray-600 mb-2">Predicted GPA</p>
+                        <p class="text-3xl font-bold text-[#FF6B35]">3.75</p>
+                    </div>
+
+                    <!-- Confidence -->
+                    <div class="bg-white rounded-xl p-6 border border-gray-200">
+                        <p class="text-sm text-gray-600 mb-2">Confidence</p>
+                        <p class="text-3xl font-bold text-[#FF6B35]">95%</p>
+                    </div>
+                </div>
+
+                <!-- Recommendations Section -->
+                <div class="mb-4">
+                    <h2 class="text-lg font-bold text-gray-900 mb-3">Recommendations</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        To improve your GPA, consider increasing your study hours for the selected course. Aim for at
+                        least 10 hours per week to achieve a higher grade.
+                    </p>
                 </div>
             </div>
         </main>
